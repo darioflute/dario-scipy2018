@@ -1,0 +1,21 @@
+language: python
+sudo: false
+
+# Only run on master since we'll be using branches for our PR
+branches:
+  only:
+    - master
+
+# What Python version to use
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+
+# How do we install?
+install:
+  - pip install . pytest-flake8 flake8-docstrings flake8-import-order
+
+# How do we test?
+script:
+  - pytest --flake8
