@@ -8,6 +8,7 @@ branches:
 
 # What Python version to use
 python:
+  - 2.7
   - 3.6
 
 # How do we install?
